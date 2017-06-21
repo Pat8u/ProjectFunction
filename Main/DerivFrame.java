@@ -15,12 +15,12 @@ public class DerivFrame extends JFrame {
     private final JButton analyseButton;
 
     public DerivFrame(){
-        //might have to define specific variables to make analysation process easier TODO
+        //TODO might have to define specific variables to make analysation process easier
         super("Function Caculator");
         setLayout(new BorderLayout());
         welcomeText = new JLabel("Welcome");
         add(welcomeText,BorderLayout.PAGE_START);
-        explanationText = new JLabel("Please input function in text box to be interperted");
+        explanationText = new JLabel("Please input function in text box to be interpreted");
         add(explanationText,BorderLayout.LINE_START);
         functionInput = new JTextField();
         add(functionInput,BorderLayout.CENTER);
