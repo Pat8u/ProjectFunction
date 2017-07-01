@@ -20,7 +20,8 @@ public class DerivFrame extends JFrame {
         setLayout(new BorderLayout());
         welcomeText = new JLabel("Welcome");
         add(welcomeText,BorderLayout.PAGE_START);
-        explanationText = new JLabel("Please input function in text box to be interpreted");
+        explanationText = new JLabel("Please input function in text box to be interpreted, requires spaces " +
+                "between terms");
         add(explanationText,BorderLayout.LINE_START);
         functionInput = new JTextField();
         add(functionInput,BorderLayout.CENTER);
@@ -37,8 +38,9 @@ public class DerivFrame extends JFrame {
         @Override
         public void actionPerformed(ActionEvent event){
             if(event.getSource() == analyseButton){
-                Analyse analyse = new Analyse(functionInput.getText());
+                Analyse analyse = new Analyse(functionInput.getText(),'x');
                 System.out.println(functionInput.getText()); //TODO get rid of this debug code
+                System.out.println(analyse.getList());
             }
         }
 
